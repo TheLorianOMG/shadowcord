@@ -1,0 +1,248 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    :root {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+    }
+  }
+
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+  }
+  .App {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .spin {
+    animation: spin 2s linear infinite;
+  }
+  
+  .App header {
+    height: 10vh;
+    min-height: 50px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    justify-content: space-between;
+    z-index: 40;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .App section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: hsl(224, 66%, 6%);
+  }
+  
+  main {
+    padding: 10px;
+    height: 78vh;
+    margin: 8vh 0 10vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  main::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  main::-webkit-scrollbar-track {
+    background: #1d1d1d;
+  }
+  
+  main::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+  
+  form {
+    height: 5vh;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    font-size: 1.5rem;
+    gap: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+    
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  
+  .sign-in {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+    
+  .sign-out {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  :hover.sign-out {
+    background-color: #68b0e4;
+  }
+  
+  ul, li {
+    text-align: left;
+    list-style: none;
+  }
+  
+  .text {
+    max-width: 500px;
+    margin-bottom: 12px;
+    line-height: 24px;
+    padding: 10px 16px;
+    border-radius: 15px;
+    position: relative;
+    color: white;
+    text-align: left;
+  }
+  
+  .message {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .sent {
+    flex-direction: row-reverse;
+  }
+  
+  .sent p {
+    color: white;
+    background: #22212c;
+    align-self: flex-end;
+  }
+  .received p {
+    background: #3d4042;
+    color: white;
+  }
+  
+  .sentName {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  
+  .messageBubble {
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+  
+  .nameTag {
+    /* margin-right: 100%;
+    white-space: nowrap; */
+    font-size: 0.7rem;
+    font-weight: normal;
+  }
+  
+  .homepageText {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cometLogo {
+    font-size: 2.5rem;
+    margin: 0px;
+    margin-top: 10px;
+  }
+    
+  @media only screen and (max-width: 510px) {
+    .appTitle {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media only screen and (max-width: 420px) {
+    .appTitle {
+      font-size: 1.2rem;
+    }
+    .sign-out {
+      font-size: 1.4rem;
+    }
+  }
